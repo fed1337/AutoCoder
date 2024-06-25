@@ -16,24 +16,29 @@ jobs:
       - name: Print issue number
         env:
           ISSUE_NUMBER: ${{ github.event.issue.number }}
-        run: echo "Issue Title: ${ISSUE_NUMBER}"
+        run: |
+          echo "Issue Title: ${ISSUE_NUMBER}"
 
       - name: Print issue title
         env:
           ISSUE_TITLE: ${{ github.event.issue.title }}
-        run: echo "Issue Title: ${ISSUE_TITLE}"
+        run: |
+          echo "Issue Title: ${ISSUE_TITLE}"
         
       - name: Print issue body
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
-        run: echo "Issue Body: ${ISSUE_BODY}"
+        run: |
+          echo "Issue Body: ${ISSUE_BODY}"
       
       - name: Print issue assignees
         env:
           ISSUE_ASSIGNEE: ${{ join(github.event.issue.assignees.*.login, ', ') }}
-        run: echo "Issue Assignees: ${ISSUE_ASSIGNEE}"
+        run: |
+          echo "Issue Assignees: ${ISSUE_ASSIGNEE}"
       
       - name: Print issue labels
-              env:
+        env:
           ISSUE_LABELS: ${{ join(github.event.issue.labels.*.name, ', ') }}
-        run: echo "Issue Labels: ${ISSUE_LABELS}"
+        run: |
+          echo "Issue Labels: ${ISSUE_LABELS}"
