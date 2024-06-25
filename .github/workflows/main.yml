@@ -6,7 +6,7 @@ jobs:
     
     steps:
       - name: Checkout Code
-        uses: actions/checkout@23b5a9f
+        uses: actions/checkout@v4
 
       - name: Greeting Message
         run: echo Hello, world
